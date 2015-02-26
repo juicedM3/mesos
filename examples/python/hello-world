@@ -27,6 +27,7 @@ test ! -e ${PROTOBUF} && \
 
 MESOS_EGGS=$(find ${MESOS_BUILD_DIR}/src/python/dist -name "*.egg" | tr "\\n" ":")
 
+# HERE
 SCRIPT=${MESOS_SOURCE_DIR}/src/examples/python/hello_world_framework.py
 
 test ! -e ${SCRIPT} && \

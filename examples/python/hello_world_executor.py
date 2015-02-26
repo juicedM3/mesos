@@ -37,7 +37,9 @@ class MyExecutor(mesos.interface.Executor):
             driver.sendStatusUpdate(update)
 
             # This is where one would perform the requested task.
+            # HERE
             print "Hello World"
+            # For S&Gs.
             sys.stderr.write("Hello World\n")
 
             print "Sending status update..."

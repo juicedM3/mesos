@@ -149,12 +149,16 @@ if __name__ == "__main__":
 
     executor = mesos_pb2.ExecutorInfo()
     executor.executor_id.value = "default"
+    # HERE
     executor.command.value = os.path.abspath("./hello-world-executor")
+    # HERE
     executor.name = "Hello World Executor (Python)"
+    # HERE
     executor.source = "python_hello_world_test"
 
     framework = mesos_pb2.FrameworkInfo()
     framework.user = "" # Have Mesos fill in the current user.
+    # HERE
     framework.name = "Test Hello World Framework (Python)"
 
     # TODO(vinod): Make checkpointing the default when it is default
@@ -186,6 +190,7 @@ if __name__ == "__main__":
             sys.argv[1],
             credential)
     else:
+        # HERE
         framework.principal = "hello-world-framework-python"
 
         driver = mesos.native.MesosSchedulerDriver(
